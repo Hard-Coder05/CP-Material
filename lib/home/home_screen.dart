@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagramclone/home/posts.dart';
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -25,23 +26,13 @@ appBar: AppBar(
             )
           ],
         ),
-        body: Container(
-        child: ListView(
-          children: <Widget>[
-            Column(
-              children: <Widget> [
-                Container(
-                  height: 79,
-                  child: Stories(),
-                ),
-                Divider(),
-                Column(
-                )
+        body: Stack(
+children: <Widget> [
+                PostsScreen()
               ],
-            )
-          ],
+          
         )
-      ),
+      
     );
   }
 
@@ -93,8 +84,12 @@ children: <Widget>[
           Text("_im_siddharth",style: TextStyle(fontFamily: 'Gotham'),)
         ],
       ),
-    ),
+  )
 ],
     );
   }
-  
+
+   /*Container(
+                  height: 79,
+                  child: Stories(),
+                ),*/
