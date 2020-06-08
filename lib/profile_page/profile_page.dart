@@ -27,7 +27,7 @@ class ProfilePage extends StatelessWidget {
               children: <Widget>[
                 Container(
                   constraints: BoxConstraints.expand(
-                      height: MediaQuery.of(context).size.height-300 ),
+                      height: MediaQuery.of(context).size.height - 250),
                   child: ListView(
                     shrinkWrap: true,
                     padding: EdgeInsets.zero,
@@ -39,20 +39,19 @@ class ProfilePage extends StatelessWidget {
                           children: <Widget>[
                             Row(
                               children: <Widget>[
-                                Container(
-                                  height: 50,
-                                  width: 50,
-                                  child: CircleAvatar(
-                                      backgroundImage:
-                                          AssetImage('assets/download.png')),
-                                ),
                                 Column(
                                   children: <Widget>[
                                     Row(
                                       children: <Widget>[
                                         Container(
+                                          child: CircleAvatar(
+                                              radius: 50,
+                                              backgroundImage: AssetImage(
+                                                  'assets/download.png')),
+                                        ),
+                                        Container(
                                           margin: EdgeInsets.only(
-                                              left: 68, right: 20),
+                                              left: 40, right: 20),
                                           child: Column(
                                             children: <Widget>[
                                               Text(
@@ -95,16 +94,33 @@ class ProfilePage extends StatelessWidget {
                                         ),
                                       ],
                                     ),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
                                     Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
                                       children: <Widget>[
+                                        Text(
+                                          "_im_siddharth",
+                                          style: TextStyle(
+                                              fontFamily: 'Gotham',
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.black),
+                                        ),
+                                        SizedBox(
+                                          width: 30,
+                                        ),
                                         Container(
                                           decoration: BoxDecoration(
                                             borderRadius: BorderRadius.all(
                                                 Radius.circular(5)),
                                             color: Colors.blue,
                                           ),
-                                          margin: EdgeInsets.all(10),
-                                          width: 120,
+                                          margin: EdgeInsets.all(5),
+                                          width: 90,
                                           height: 30,
                                           child: FlatButton(
                                             child: Text(
@@ -116,9 +132,9 @@ class ProfilePage extends StatelessWidget {
                                           ),
                                         ),
                                         Container(
-                                          margin: EdgeInsets.all(10),
+                                          margin: EdgeInsets.all(5),
                                           height: 30,
-                                          width: 120,
+                                          width: 110,
                                           decoration: BoxDecoration(
                                               borderRadius: BorderRadius.all(
                                                   Radius.circular(5)),
@@ -136,28 +152,7 @@ class ProfilePage extends StatelessWidget {
                                 )
                               ],
                             ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: <Widget>[
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: <Widget>[
-                                    Text(
-                                      "_im_siddharth",
-                                      style: TextStyle(
-                                          fontFamily: 'Gotham',
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.black),
-                                    ),
-                                    Text("I am a profile on instagram"),
-                                    InkWell(
-                                        child: new Text('my instagram'),
-                                        onTap: () => launch(
-                                            'https://www.instagram.com/_im_siddharth/')),
-                                  ],
-                                ),
-                              ],
-                            )
+                            Divider(),
                           ],
                         ),
                         color: Colors.white,
