@@ -42,15 +42,15 @@ class _SplashScreenState extends State<SplashScreen> {
                   Image.asset(
                     'assets/logo.jpg',
                     fit: BoxFit.contain,
-                    height: 250.0,
-                    width: 250.0,
+                    height: 100.0,
+                    width: 100.0,
                   ),
                 ],
               )
             ],
           ),
           SizedBox(
-            height: 250.0,
+            height: 475.0,
           ),
           Text(
             "from",

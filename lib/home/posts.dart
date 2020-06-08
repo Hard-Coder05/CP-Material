@@ -26,7 +26,7 @@ class PostsScreen extends StatelessWidget {
                       margin: EdgeInsets.only(right: 10),
                       child: CircleAvatar(backgroundImage: AssetImage('assets/download.png'),),
                     ),
-                    Text(chatListItems[i].personName,)
+                    Text(chatListItems[i].personName,style: TextStyle(fontFamily: 'Gotham', fontWeight: FontWeight.bold, color: Colors.black),)
                   ],
                 ),
                 IconButton(
@@ -51,6 +51,10 @@ class PostsScreen extends StatelessWidget {
                 image: AssetImage('assets/download.png')
               )
             ),
+          ),
+          Container(
+            constraints: BoxConstraints.expand(height: 1),
+            color: Colors.grey,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -100,7 +104,7 @@ class PostsScreen extends StatelessWidget {
             ],
           ),
           FlatButton(
-            child: Text("500 likes",),
+            child: Text("500 likes",style: TextStyle(fontFamily: 'Gotham', fontWeight: FontWeight.bold, color: Colors.black),),
             onPressed: () {
               },
           ),
@@ -109,17 +113,17 @@ class PostsScreen extends StatelessWidget {
               Container(
                 margin: EdgeInsets.only(left: 15, right: 10),
                 child: Text(
-                  chatListItems[i].personName,
+                  chatListItems[i].personName,style: TextStyle(fontFamily: 'Gotham', fontWeight: FontWeight.bold, color: Colors.black),
                 ),
               ),
               Text(
-                chatListItems[i].lastMessage,
+                chatListItems[i].lastMessage,style: TextStyle(fontFamily: 'Gotham'),
               
               )
             ],
           ),
           FlatButton(
-            child: Text("View all 80 comments",),
+            child: Text("View all 80 comments",style: TextStyle(fontFamily: 'Gotham', color: Colors.grey),),
             onPressed: () {
               
               },
