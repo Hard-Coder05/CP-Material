@@ -1,6 +1,6 @@
 # instagramclone
 
-A new Flutter application.
+A new Flutter Application.
 
 ## Getting Started
 
